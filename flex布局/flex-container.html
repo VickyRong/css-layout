@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #2196f3;
+            text-align: center;
+            margin: 10px;
+        }
+
+        h3 {
+            text-align: center;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        p {
+            font-weight: bold;
+            color: #2196f3;
+            margin: 0 0 0 10px;
+        }
+
+        .main-box {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0 30px;
+        }
+
+        .contain-wrap {
+            width: 550px;
+            min-height: 300px;
+            border: 10px solid#586B8F;
+            margin-right: 30px;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: #E3F2FD;
+            margin-bottom: 10px;
+            display: flex;
+        }
+
+        .container1 {
+            flex-direction: row;
+        }
+
+        .container2 {
+            flex-direction: row-reverse;
+        }
+
+        .container3 {
+            flex-direction: column;
+        }
+
+        .container4 {
+            flex-direction: column-reverse;
+        }
+
+        .container5 {
+            flex-wrap: nowrap;
+        }
+
+        .container6 {
+            flex-wrap: wrap;
+        }
+
+        .container7 {
+            flex-wrap: wrap-reverse;
+        }
+
+        .container8 {
+            justify-content: flex-start;
+        }
+
+        .container9 {
+            justify-content: flex-end;
+        }
+
+        .container10 {
+            justify-content: center;
+        }
+
+        .container11 {
+            justify-content: space-between;
+        }
+
+        .container12 {
+            justify-content: space-around;
+        }
+
+        .container13 {
+            justify-content: space-evenly;
+        }
+
+        .container14 {
+            align-items: flex-start;
+        }
+
+        .container15 {
+            align-items: flex-end;
+        }
+
+        .container16 {
+            align-items: center;
+        }
+
+        .container17 {
+            align-items: baseline;
+        }
+
+        .container18 {
+            align-items: stretch;
+        }
+
+        .container18 .item {
+            align-items: stretch;
+            height: auto;
+        }
+
+        .container19 {
+            align-content: flex-start;
+        }
+
+        .container20 {
+            align-content: flex-end;
+        }
+
+        .container21 {
+            align-content: center;
+        }
+
+        .container22 {
+            align-content: space-between;
+        }
+        
+        .container23 {
+            align-content: space-around;
+        }
+
+        .container24 {
+            align-content: stretch;
+        }
+        .container24 .item{
+            height: auto;
+        }
+        .contain-wrap:nth-child(3) .item,
+        .contain-wrap:nth-child(4) .item {
+            margin-bottom: 0;
+        }
+
+        .contain-wrap:nth-child(4) .container {
+            min-height: 100px;
+        }
+
+        .contain-wrap:nth-child(5) .container {
+            position: relative;
+            flex-wrap: wrap;
+            width: 250px;
+            min-height: 200px;
+            margin: 20px 20px 20px 0;
+        }
+
+        .item {
+            width: 30px;
+            height: 30px;
+            background: #FC5C9C;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+
+        .item1 {
+            width: 50px;
+            height: 30px;
+        }
+
+        .item2 {
+            width: 70px;
+            height: 30px;
+        }
+
+        .item3 {
+            width: 30px;
+            height: 50px;
+        }
+
+        .item4 {
+            width: 30px;
+            height: 70px;
+        }
+
+        .s-fs20 {
+            font-size: 20px;
+        }
+
+        .s-fs40 {
+            font-size: 40px;
+        }
+
+        .g-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .g-poa{
+            position: absolute;
+            top:-25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-box">
+        <div class="contain-wrap">
+            <h1>flex-direction</h1>
+            <h3>【main主轴方向】</h3>
+            <h3>flex-direction: row | row-reverse | column | column-reverse</h3>
+            <p>row (默认)</p>
+            <div class="container container1">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+            </div>
+            <p>row-reverse</p>
+            <div class="container container2">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+            </div>
+            <p>column</p>
+            <div class="container container3">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+            </div>
+            <p>column-reverse</p>
+            <div class="container container4">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+            </div>
+        </div>
+        <div class="contain-wrap">
+            <h1>flex-wrap</h1>
+            <h3>【换行方式】</h3>
+            <h3>flex-wrap: nowrap | wrap | wrap-reverse</h3>
+            <p>nowrap（默认）</p>
+            <div class="container container5">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+                <div class="item">11</div>
+                <div class="item">12</div>
+                <div class="item">13</div>
+                <div class="item">14</div>
+                <div class="item">15</div>
+            </div>
+            <p>wrap:换行</p>
+            <div class="container container6">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+                <div class="item">11</div>
+                <div class="item">12</div>
+                <div class="item">13</div>
+                <div class="item">14</div>
+                <div class="item">15</div>
+            </div>
+            <p>wrap-reverse:换行并反向排列</p>
+            <div class="container container7">
+                <div class="item">1</div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+                <div class="item">4</div>
+                <div class="item">5</div>
+                <div class="item">6</div>
+                <div class="item">7</div>
+                <div class="item">8</div>
+                <div class="item">9</div>
+                <div class="item">10</div>
+                <div class="item">11</div>
+                <div class="item">12</div>
+                <div class="item">13</div>
+                <div class="item">14</div>
+                <div class="item">15</div>
+            </div>
+        </div>
+        <div class="contain-wrap">
+            <h1>justify-content</h1>
+            <h3>【item在main轴上的排列】</h3>
+            <h3>justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly;</h3>
+            <p>flex-start (默认)</p>
+            <div class="container container8">
+                <div class="item">1</div>
+                <div class="item item1">2</div>
+                <div class="item item2">3</div>
+                <div class="item item1">4</div>
+            </div>
+            <p>flex-end</p>
+            <div class="container container9">
+                <div class="item">1</div>
+                <div class="item item1">2</div>
+                <div class="item item2">3</div>
+                <div class="item item1">4</div>
+            </div>
+            <p>center</p>
+            <div class="container container10">
+                <div class="item">1</div>
+                <div class="item item1">2</div>
+                <div class="item item2">3</div>
+                <div class="item item1">4</div>
+            </div>
+            <p>space-between</p>
+            <div class="container container11">
+                <div class="item">1</div>
+                <div class="item item1">2</div>
+                <div class="item item2">3</div>
+                <div class="item item1">4</div>
+            </div>
+            <p>space-around</p>
+            <div class="container container12">
+                <div class="item">1</div>
+                <div class="item item1">2</div>
+                <div class="item item2">3</div>
+                <div class="item item1">4</div>
+            </div>
+            <p>space-evenly</p>
+            <div class="container container13">
+                <div class="item">1</div>
+                <div class="item item1">2</div>
+                <div class="item item2">3</div>
+                <div class="item item1">4</div>
+            </div>
+        </div>
+        <div class="contain-wrap">
+            <h1>align-items</h1>
+            <h3>【item在cross轴上的排列】</h3>
+            <h3> align-items: flex-start | flex-end | center | baseline | stretch;</h3>
+            <p>flex-start</p>
+            <div class="container container14">
+                <div class="item">1</div>
+                <div class="item item3">2</div>
+                <div class="item item4">3</div>
+                <div class="item">4</div>
+            </div>
+            <p>flex-end</p>
+            <div class="container container15">
+                <div class="item">1</div>
+                <div class="item item3">2</div>
+                <div class="item item4">3</div>
+                <div class="item">4</div>
+            </div>
+            <p>center</p>
+            <div class="container container16">
+                <div class="item">1</div>
+                <div class="item item3">2</div>
+                <div class="item item4">3</div>
+                <div class="item">4</div>
+            </div>
+            <p>baseline</p>
+            <div class="container container17">
+                <div class="item">1</div>
+                <div class="item item3 s-fs20">2</div>
+                <div class="item item4 s-fs40">3</div>
+                <div class="item">4</div>
+            </div>
+            <p>stretch（默认）</p>
+            <div class="container container18">
+                <div class="item">1</div>
+                <div class="item item3">2</div>
+                <div class="item item4">3</div>
+                <div class="item">4</div>
+            </div>
+        </div>
+        <div class="contain-wrap">
+            <h1>align-content</h1>
+            <h3>【多根轴线的对齐方式,多行的时候才起作用】</h3>
+            <h3>align-content: flex-start | flex-end | center | space-between | space-around | stretch</h3>
+            <div class="g-wrap">
+                <div class="container container19">
+                    <p class="g-poa">flex-start</p>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item item2">1</div>
+                    <div class="item item1">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item item2">3</div>
+                    <div class="item item1">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                </div>
+                <div class="container container20">
+                    <p class="g-poa">flex-end</p>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item item2">1</div>
+                    <div class="item item1">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item item2">3</div>
+                    <div class="item item1">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                </div>
+                <div class="container container21">
+                    <p class="g-poa">flex-end</p>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item item2">1</div>
+                    <div class="item item1">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item item2">3</div>
+                    <div class="item item1">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                </div>
+                <div class="container container22">
+                    <p class="g-poa">space-between</p>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item item2">1</div>
+                    <div class="item item1">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item item2">3</div>
+                    <div class="item item1">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                </div>
+                <div class="container container23">
+                    <p class="g-poa">space-around</p>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item item2">1</div>
+                    <div class="item item1">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item item2">3</div>
+                    <div class="item item1">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                </div>
+                <div class="container container24">
+                    <p class="g-poa">stretch (默认)</p>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item item2">1</div>
+                    <div class="item item1">2</div>
+                    <div class="item">3</div>
+                    <div class="item">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                    <div class="item item2">3</div>
+                    <div class="item item1">4</div>
+                    <div class="item">1</div>
+                    <div class="item">2</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <p>
+        <a target="_blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">资料链接</a>
+    </p>
+</body>
+
+</html>
