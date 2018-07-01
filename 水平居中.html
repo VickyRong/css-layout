@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>水平居中</title>
+    <style rel="stylesheet" type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        .box1-wrap,.box2-wrap {
+            text-align: center;
+        }
+
+        .box1 {
+            background: #bde4f4;
+        }
+        
+        .box2 {
+            display: inline-block;
+            background: #ff7f50;
+            padding:30px;
+        }
+        .box3{
+            width: 200px;
+            height: 50px;
+            margin: 0 auto;
+            background: pink;
+        }
+        .box4{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #C5E1A5;
+            padding: 30px;
+        }
+        .box5-wrap{
+            margin-top:150px;
+            display: flex;
+            justify-content: center;
+        }
+        .box5{
+            padding: 30px;
+            background: orange;
+            clear: both;
+        }
+
+        .g-mt30 {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box1-wrap">
+        <span class="box1">
+            1.行内元素:text-align:center;
+        </span>
+    </div>
+
+    <div class="box2-wrap g-mt30">
+        <span class="box2">
+            2.行内块元素:父元素:text-align:center;
+        </span>
+    </div>
+
+    <div class="box3 g-mt30">
+            3.块级元素:margin:0 auto;(宽度已知)
+    </div>
+
+    <div class="box4 g-mt30">
+            4.块级元素:transform:translateX(-50%);(宽度未知)
+    </div>
+    <div class="box5-wrap">
+        <div class="box5 g-mt30">
+            5.flex布局:设置父元素display:flex; 
+            justify-content:center;
+        </div>
+    </div>
+
+</body>
+
+</html>
