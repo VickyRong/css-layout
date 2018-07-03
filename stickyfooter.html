@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>stickyfooter</title>
+    <style type="text/css" rel="stylesheet">
+        *{margin:0;padding:0;}
+        html,body{
+            height: 100%;
+        }
+        .content{
+            background: #FFE082;
+            min-height: 100%;
+            text-align: center;
+        }
+        .inside{
+            padding-bottom: 50px;
+            font-size: 0;/*去除img边距*/
+        }
+        .footer{
+            background: #2196F3;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            color:#fff;
+            margin-top:-50px;
+        }
+        .s-fs16{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="inside">
+            <!--内容区域-->
+                <p class="s-fs16">
+                    内容内容内容内容内容内容内容内容内容内容
+                    <a href="javascript:;" class="addBtn">增加内容</a>
+                </p>
+                <div class="img-wrap">
+                </div>
+        </div>
+    </div>
+    <div class="footer">
+        sticky footer
+    </div>
+    <script type="text/javascript">
+        let obj = document.getElementsByClassName("img-wrap")[0];
+        let btn = document.getElementsByClassName("addBtn");
+        let dom = document.createElement("img");
+        dom.src = "http://statichome.weimob.com/build/img/nweb/index/f2_bg/bg_ds.jpg";
+        document.getElementsByClassName("addBtn")[0].onclick = function(){
+            obj.appendChild(dom);
+        }
+    
+    </script>
+
+</body>
+
+</html>
