@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex实现stickyfooter</title>
+    <style rel="stylesheet" type="text/css">
+    *{margin:0;padding:0}
+    html{height: 100%;}
+    body{
+        min-height: 100%;
+        display: flex;
+        flex-direction:column;
+    }
+    .content{
+        flex: 1;
+        background: #b39ddb;
+    }
+
+    .footer{
+        background: #2196F3;
+        height: 50px;
+        line-height: 50px;
+        text-align: center;
+        color:#fff;
+    }
+    </style>
+</head>
+<body>
+    <div class="content">
+        flex实现stickyfooter,相当方便
+        <a href="javascript:;" class="addBtn">增加内容</a>
+        <div class="img-wrap"> </div>
+    </div>
+    <div class="footer">
+        stickyfooter
+    </div>
+    <script type="text/javascript">
+        let obj = document.getElementsByClassName("img-wrap")[0];
+        let btn = document.getElementsByClassName("addBtn");
+        let dom = document.createElement("img");
+        dom.src = "http://statichome.weimob.com/build/img/nweb/index/f2_bg/bg_ds.jpg";
+        document.getElementsByClassName("addBtn")[0].onclick = function(){
+            obj.appendChild(dom);
+        }
+    </script>
+</body>
+</html>
